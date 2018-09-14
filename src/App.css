@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
+
+.app {
+    margin: 50px 0;
+}
+.pokedex {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.pokemon-wrap {
+    width: 215px;
+    height: 250px;
+    border: 1px solid rgba( 0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.pokemon-img {
+    height: 120px;
+}
+.name {
+    height: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.number {
+    margin-right: 5px; 
+}
+.types {
+    font-size: 11px;
+    font-weight: 600;
+}
+.type {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 3px;
+    border-radius: 10%;
+    color: rgba(250, 250, 250, 1);
+}
+.grass {
+    background-color: rgb(43, 191, 13);
+}
+.poison {
+    background-color:  rgb(132, 87, 131);
+}
+.fire {
+    background-color:  rgb(219, 91, 48);
+}
+.flying {
+    background-color:  rgb(100, 136, 188);
+}
+.water {
+    background-color: rgb(78, 173, 229);
+}
+.bug {
+    background-color: rgb(104, 81, 32);
+}
+.normal {
+    background-color: rgb(31, 122, 87);
+}
+.electric {
+    background-color: rgb(224, 206, 67);
+}
+.ground {
+    background-color: rgb(68, 61, 52);
+}
+.psychic {
+    background-color: rgb(229, 96, 171);
+}
+.fighting {
+    background-color: rgb(211, 33, 33);
+}
+.rock {
+    background-color: rgb(96, 96, 96);
+}
+.ice {
+    background-color: rgb(154, 181, 188);
+}
+.ghost {
+    background-color: rgb(125, 111, 132);
+}
+.dragon {
+    background-color: rgb(14, 63, 114);
+}
