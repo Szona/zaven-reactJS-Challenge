@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
 import Pokedex from './components/Pokedex';
-import { Provider } from 'react-redux';
 
-class App extends Component {    
+import { connect } from 'react-redux';
+import { fetchPokemons } from './actions/dataAction';
+
+class App extends Component { 
+
+  componentWillMount() {
+    this.props.fetchPokemons();
+  }  
+
   render() {
     return (
-      <Provider store={store}>
         <div className="app">
-          <Pokedex pokemons={this.state.pokemons}/>
+          <Pokedex pokemons={this.props.pokemons}/>
         </div>
-      </Provider>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  pokemons: state.data.items
+});
+
+export default connect(mapStateToProps, { fetchPokemons })(App);
