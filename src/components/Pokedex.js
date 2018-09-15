@@ -5,7 +5,6 @@ class Pokedex extends Component {
 
     listPokemons() {
         const pokemons = this.props.pokemons;
-        // console.log(pokemons)
         if (typeof pokemons !== 'undefined' && pokemons !== null) {
             if (pokemons.length > 0) {
                 const pokemonList = pokemons.map(pokemon => {
@@ -22,7 +21,7 @@ class Pokedex extends Component {
     render() {
         return (
             <div className="pokedex">
-                    {this.listPokemons()}
+                {this.listPokemons()}
             </div>
         )
     }

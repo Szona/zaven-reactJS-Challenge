@@ -9,7 +9,7 @@ export default function(state = initialState, action) {
         case FETCH_POKEMONS:
             return {
                 ...state,
-                items: action.payload
+                items: action.data
             }
         default:
             return state;

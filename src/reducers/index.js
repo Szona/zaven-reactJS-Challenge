@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import dataReducer from './dataReducers';
+import dataReducer from './dataReducer';
 
 export default combineReducers({
-    pokemons: dataReducer
+    data: dataReducer
 });
