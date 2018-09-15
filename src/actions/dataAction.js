@@ -1,15 +1,26 @@
-import { FETCH_POKEMONS } from './types'; 
+import { FETCH_POKEMONS, NEXT_PAGE, PREV_PAGE } from './types'; 
 
-const api = "http://localhost:3001";
+const api = 'http://localhost:3001/pokemon?_page=${pageNum}&_limit=12'
 
-export const fetchPokemons = () => dispatch => {
-    console.log('fdsf');
-    fetch(`${api}/pokemon`)
+export const fetchPokemons = (pageNum) => dispatch => {
+    fetch(api)
         .then(res => res.json())
         .then(data => 
             dispatch ({
                 type: FETCH_POKEMONS,
-                data: data
+                payload: data
             })
         );    
+};
+export function nextPage() {
+    return {
+        type: NEXT_PAGE,
+        payload: 1
+    }
+};
+export function prevPage() {
+    return {
+        type: PREV_PAGE,
+        payload: 1
+    }
 };
