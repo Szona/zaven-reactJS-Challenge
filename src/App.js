@@ -41,7 +41,7 @@ App.propTypes = {
   fetchPokemons: PropTypes.func.isRequired,
   nextPage: PropTypes.func.isRequired,
   previousPage: PropTypes.func.isRequired,
-  pokemons: PropTypes.array.isRequired,
+  pokemons: PropTypes.object.isRequired,
   page: PropTypes.number.isRequired
 };
 

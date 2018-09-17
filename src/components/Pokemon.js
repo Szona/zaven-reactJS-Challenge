@@ -6,7 +6,7 @@ class Pokemon extends Component {
         const types = this.props.type; 
         const list = types.map(type => {
             return (
-                <li className={`type ${type.toLowerCase()}`} key={this.props.id}>
+                <li className={`type ${type.toLowerCase()}`} key="type">
                     {type}
                 </li>
             )

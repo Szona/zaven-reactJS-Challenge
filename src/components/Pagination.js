@@ -6,7 +6,7 @@ class Pagination extends Component {
         return (
             <div className="nav">
                 <button className="btn" onClick={() => this.props.prevPage()}>Prev</button>
-                <div class="number-of-pages"> 
+                <div className="number-of-pages"> 
                     <span> {this.props.page} </span> of 13
                 </div>
                 <button className="btn" onClick={() => this.props.nextPage()}>Next</button>
