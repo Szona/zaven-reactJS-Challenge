@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 class Pagination extends Component {
+    
     render() {
-        const page = this.props.page;
         return (
             <div>
-                <button >Prev</button>
+                <button onClick={() => this.props.prevPage()}>Prev</button>
                 <div> 
-                    {page} <span>of 13</span>
+                    <span> {this.props.page} </span> of 13
                 </div>
-                <button >Next</button>
+                <button onClick={() => this.props.nextPage()}>Next</button>
             </div>
         )
     }
