@@ -2,6 +2,7 @@
 
 .app {
     margin: 50px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 .pokedex {
     max-width: 900px;
@@ -9,6 +10,23 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+}
+.nav {
+    width: 200px;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.number-of-pages {
+    
+}
+.btn {
+    border: 1px solid rgba( 0, 0, 0, 0.1);
+    background: none;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 .pokemon-wrap {
     width: 215px;
@@ -24,7 +42,6 @@
 }
 .name {
     height: 0;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 .number {

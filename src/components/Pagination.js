@@ -4,12 +4,12 @@ class Pagination extends Component {
     
     render() {
         return (
-            <div>
-                <button onClick={() => this.props.prevPage()}>Prev</button>
-                <div> 
+            <div className="nav">
+                <button class="btn" onClick={() => this.props.prevPage()}>Prev</button>
+                <div class="number-of-pages"> 
                     <span> {this.props.page} </span> of 13
                 </div>
-                <button onClick={() => this.props.nextPage()}>Next</button>
+                <button class="btn" onClick={() => this.props.nextPage()}>Next</button>
             </div>
         )
     }
