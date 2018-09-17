@@ -2,7 +2,7 @@
 Recruitment tasks for a position of Junior Front-end Developer
 
 ## Built with 
-* [React](https://github.com/facebook/create-react-app)
+* [Create-react-app](https://github.com/facebook/create-react-app)
 * [Redux](https://github.com/reduxjs/redux)
 * [Thunk](https://github.com/reduxjs/redux-thunk)
 
@@ -23,7 +23,7 @@ and:
 npm run start:server
 ```
 ## Authors
-Alicja Sawczuk (https://szona.github.io/portfolio/)
+Alicja Sawczuk (https://github.com/Szona)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
