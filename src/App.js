@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
 import Pokedex from './components/Pokedex';
 import Pagination from './components/Pagination';
 import { connect } from 'react-redux';
@@ -26,13 +27,23 @@ class App extends Component {
     return (
         <div className="app">
           <Pokedex pokemons={this.props.pokemons} />
-          <Pagination page={this.props.page} 
-          prevPage={() => this.handlePreviousPage()}
-          nextPage={() => this.handleNextPage()} />
+          <Pagination 
+            page={this.props.page} 
+            prevPage={() => this.handlePreviousPage()}
+            nextPage={() => this.handleNextPage()} 
+            />
         </div>
     );
   }
 }
+
+App.propTypes = {
+  fetchPokemons: PropTypes.func.isRequired,
+  nextPage: PropTypes.func.isRequired,
+  previousPage: PropTypes.func.isRequired,
+  pokemons: PropTypes.array.isRequired,
+  page: PropTypes.number.isRequired
+};
 
 const mapStateToProps = state => ({
   pokemons: state.data.pokemons,
