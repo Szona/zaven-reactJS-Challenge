@@ -10,16 +10,15 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchPokemons();
-    
   }  
 
-  handlePreviousPage() {
-    this.props.previousPage();
+  async handlePreviousPage() {
+    await this.props.previousPage();
     this.props.fetchPokemons(this.props.page);
   }
 
-  handleNextPage() {
-    this.props.nextPage();
+  async handleNextPage() {
+    await this.props.nextPage();
     this.props.fetchPokemons(this.props.page);
   }
 
@@ -29,7 +28,7 @@ class App extends Component {
           <Pokedex pokemons={this.props.pokemons} />
           <Pagination page={this.props.page} 
           prevPage={() => this.handlePreviousPage()}
-          nextPage={() => this.handleNextPage()}/>
+          nextPage={() => this.handleNextPage()} />
         </div>
     );
   }
