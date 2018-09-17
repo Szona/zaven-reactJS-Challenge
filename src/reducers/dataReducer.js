@@ -1,7 +1,8 @@
-import { FETCH_POKEMONS } from '../actions/types'; 
+import { FETCH_POKEMONS, NEXT_PAGE, PREV_PAGE } from '../actions/types'; 
 
 const initialState = {
-    items: {}
+    pokemons: {},
+    page: 1,
 };
 
 export default function(state = initialState, action) {
@@ -9,7 +10,31 @@ export default function(state = initialState, action) {
         case FETCH_POKEMONS:
             return {
                 ...state,
-                items: action.data
+                pokemons: action.payload
+            }  
+        case NEXT_PAGE:
+            if (state.page < 13 ) {
+                return {
+                    ...state,
+                    page: state.page + action.payload
+                }
+            } else {
+                return {
+                    ...state,
+                    page: 13
+                }
+            }
+        case PREV_PAGE:
+            if (state.page === 13) {
+                return {
+                    ...state,
+                    page: state.page - action.payload
+                }
+            } else {
+                return {
+                    ...state,
+                    page: 1
+                }
             }
         default:
             return state;
