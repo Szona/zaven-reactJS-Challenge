@@ -4,10 +4,9 @@ class Pokemon extends Component {
     
     pokemonTypes() {
         const types = this.props.type; 
-        console.log(types);
         const list = types.map(type => {
             return (
-                <li className={`type ${type.toLowerCase()}`} key="type">
+                <li className={`type ${type.toLowerCase()}`} key={this.props.id}>
                     {type}
                 </li>
             )
@@ -17,9 +16,9 @@ class Pokemon extends Component {
     render () {
         return (
             <div className="pokemon-wrap">
-                <img className="pokemon-img" src={this.props.img} alt=""/>
+                <img className="pokemon-img" src={this.props.img} alt={this.props.name}/>
                 <div className="name">
-                    <span className="number">#{this.props.num}</span>
+                    <span className="number"> #{this.props.num} </span>
                     {this.props.name}
                 </div>
                 <ul className="types">
