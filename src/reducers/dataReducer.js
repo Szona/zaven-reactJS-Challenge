@@ -25,15 +25,15 @@ export default function(state = initialState, action) {
                 }
             }
         case PREV_PAGE:
-            if (state.page === 13) {
+            if (state.page === 1) {
                 return {
                     ...state,
-                    page: state.page - action.payload
+                    page: 1
                 }
             } else {
                 return {
                     ...state,
-                    page: 1
+                    page: state.page - action.payload
                 }
             }
         default:
