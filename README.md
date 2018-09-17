@@ -2,7 +2,7 @@
 Recruitment tasks for a position of Junior Front-end Developer
 
 ## Built with 
-* [React](https://github.com/facebook/create-react-app)
+* [Create-react-app](https://github.com/facebook/create-react-app)
 * [Redux](https://github.com/reduxjs/redux)
 * [Thunk](https://github.com/reduxjs/redux-thunk)
 
