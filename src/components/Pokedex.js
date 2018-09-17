@@ -9,7 +9,7 @@ class Pokedex extends Component {
             if (pokemons.length > 0) {
                 const pokemonList = pokemons.map(pokemon => {
                     return (
-                        <Pokemon img={pokemon.img} num={pokemon.num} name={pokemon.name} type={pokemon.type}/>
+                        <Pokemon id={pokemon.id} img={pokemon.img} num={pokemon.num} name={pokemon.name} type={pokemon.type} />
                     )
                 });
                 return pokemonList
